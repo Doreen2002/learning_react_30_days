@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Timeline App</title>
+<!-- Script tags including React -->
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.min.js"
+></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-
+dom.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js">
+</script>
+</head>
+<body>
+<div id="app"></div>
+<script type="text/babel">
+
+class Header extends React.Component{
+    render()
+    {
+         return(
+            <div> 
+                <div> Menu</div>
+                <div> Timeline</div>
+                <div> Search Bar </div>
+            </div>
+        )
+    }
+}
+
+class Timeline extends React.Component
+{
+    render()
+    {
+        return(
+            <div>
+                <div> Image </div>
+                <div> Time </div>
+                <div> Description </div>
+            </div>
+        )
+    }
+}
+class App extends React.Component 
+{
+    render()
+       {
+        return (
+            <div> 
+                <Header/>
+                <Timeline/>
+                </div>
+        )
+       } 
+    
+}
+var mountComponent = document.querySelector("#app")
+ReactDOM.render(<App />, mountComponent )
+
+</script>
+</body>
+</html>
